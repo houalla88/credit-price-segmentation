@@ -12,6 +12,7 @@ dependencies = ["numpy>=1.24,<3", "pandas>=2,<3", "statsmodels>=0.14,<0.15", "ma
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<9", "ruff>=0.9,<1"]
+notebook = ["jupyterlab>=4,<5", "ipykernel>=6"]
 
 [project.scripts]
 credit-segments = "credit_segments.cli:main"
