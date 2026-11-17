@@ -149,4 +149,6 @@ ruff check .
 
 Les tests vérifient les contraintes, l’absence de fuite temporelle vers les règles, l’ordre attendu sur données synthétiques, les profils, les graphiques et plusieurs entrées invalides. GitHub Actions exécute les contrôles sur Python 3.10 et 3.12.
 
-Code fourni pour étude et adaptation. Aucune licence de réutilisation n’est imposée dans cette première version ; ajouter la licence choisie avant d’autoriser explicitement sa redistribution.
+## Licence et propriété
+
+Ce projet a été développé pour le compte de **DataOptimization** (dataoptimization.be). Il est distribué sous licence **MIT** : voir le fichier [LICENSE](LICENSE). Copyright © 2026 DataOptimization.
