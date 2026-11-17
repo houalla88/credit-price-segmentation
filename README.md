@@ -151,4 +151,4 @@ Les tests vérifient les contraintes, l’absence de fuite temporelle vers les r
 
 ## Licence et propriété
 
-Ce projet a été développé pour le compte de **DataOptimization** (dataoptimization.be). Il est distribué sous licence **MIT** : voir le fichier [LICENSE](LICENSE). Copyright © 2026 DataOptimization.
+Ce projet a été développé par **DataOptimization** ([dataoptimization.be](https://dataoptimization.be)). Il est distribué sous licence **MIT** : voir le fichier [LICENSE](LICENSE). Copyright © 2026 Houbayda Oualla (DataOptimization).
