@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -7,6 +7,9 @@ name = "credit-price-segments"
 version = "0.1.0"
 description = "Interpretable constrained segmentation of credit price associations"
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Houbayda Oualla" }, { name = "DataOptimization" }]
 requires-python = ">=3.10"
 dependencies = ["numpy>=1.24,<3", "pandas>=2,<3", "statsmodels>=0.14,<0.15", "matplotlib>=3.7,<4"]
 
