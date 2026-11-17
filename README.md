@@ -119,6 +119,26 @@ Un traitement des taux endogènes, l’étude du recouvrement conditionnel, une 
 
 Ne jamais publier les CSV réels, identifiants clients ou résultats confidentiels. `data/`, `results/`, les CSV et fichiers d’environnement sont ignorés par Git par défaut. Cela ne remplace pas la revue des fichiers avant publication.
 
+## Version notebook : delta de GNoS entre deux périodes
+
+`notebooks/segmentation_delta_gnos.ipynb` propose une approche **plus simple et indépendante** du script `credit-segments` :
+
+1. Croisement des variables sociodémographiques choisies, en nombre libre. Chaque combinaison de modalités forme une cellule.
+2. Delta de GNoS par cellule entre une période AVANT et une période APRÈS le changement de prix.
+3. Recherche exhaustive des deux coupures, sur les cellules triées par delta, qui **maximisent l'écart entre les deltas** des trois segments S+, S et S-.
+   Chaque segment doit être **suffisamment alimenté** : part minimale de la population et effectif minimal dans chaque période.
+4. Tableau de bord avant/après, intervalles bootstrap, test de permutation, placebo, composition des segments et texte agrégé prêt à coller dans un LLM.
+
+```bash
+python -m pip install -e '.[notebook]'
+jupyter lab notebooks/segmentation_delta_gnos.ipynb
+```
+
+Seule la cellule **Paramètres** est à modifier. Elle explique aussi la correspondance avec les options de l'ancien script.
+Ces options n'existent plus dans le notebook : `--controls` et `--min-rate-std` servaient uniquement à la régression.
+La logique se trouve dans `src/credit_segments/delta.py`, testée dans `tests/test_delta.py`.
+Les exports, qui ne contiennent que des agrégats, sont écrits dans `results/`, ignoré par Git.
+
 ## Développement
 
 ```bash
